@@ -1,3 +1,5 @@
+const { createHtmlTagObject } = require("html-webpack-plugin");
+
 const siteContent = { // DO NOT CHANGE THIS OBJECT
   "nav": {
     "nav-item-1": "Services",
@@ -38,7 +40,7 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "accent-img": "http://localhost:9000/img/accent.png",
   },
 };
-
+// IMAGES
 const logoImg = document.querySelector("#logo-img")
 logoImg.src = siteContent.images['logo-img']
 
@@ -47,3 +49,14 @@ ctaImg.setAttribute('src', siteContent.images['cta-img'])
 
 const midImg = document.querySelector( '#middle-img')
 midImg.setAttribute('src', siteContent.images['accent-img'])
+
+//TEXT CONTENT
+//footer
+const footerLink = document.querySelector('footer a')
+footerLink.textContent = siteContent.footer.copyright
+footerLink.classList.add('bold')
+
+//CLASS NAMES
+
+//SELECTORS
+
