@@ -76,7 +76,14 @@ bottomContent.children[1].children[1].textContent = siteContent['main-content'][
 bottomContent.children[2].children[0].textContent = siteContent['main-content']['vision-h4']
 bottomContent.children[2].children[1].textContent = siteContent['main-content']['vision-content']
 
-//CLASS NAMES
+//CTA SECTION
+document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1
+document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button
 
-//SELECTORS
-
+//NAV SELECTORS
+const navLinks = document.querySelectorAll('header nav a')
+const navLinkTexts = Object.values(siteContent.nav)
+navLinks.forEach((link, idx) => {
+ link.textContent = navLinkTexts[idx] 
+ link.classList.add('italic')
+})
